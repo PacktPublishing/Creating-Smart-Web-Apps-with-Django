@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.views.generic import View
 
 from blog.models import Blogpost
@@ -16,3 +16,20 @@ class BlogpostView(View):
         ]
 
         return HttpResponse(response)
+
+class BlogpostDetailView(View):
+    def get(self, request, id):
+        try:
+            p = Blogpost.objects.get(id=id)
+        except Blogpost.DoesNotExist:
+            raise Http404()
+        else:
+            response = """
+            {title} by {author}
+            <br>
+            ---
+            <br><br>
+            {body}
+            """.format(title=p.title, author=p.author, body=p.body)
+
+            return HttpResponse(response)
