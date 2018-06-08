@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="tabs-panel is-active">
+      <p>
+        <b>{{ title }}</b> by <i>{{ author }}</i>
+      </p>
+    </div>
+
+    <div class="tabs-panel is-active">
+      <p>{{ body }}</p>
+    </div>
+{% endblock %}
