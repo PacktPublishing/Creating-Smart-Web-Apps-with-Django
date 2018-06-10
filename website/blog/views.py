@@ -1,6 +1,7 @@
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.views.generic import TemplateView
 from django.urls import reverse
+from django.shortcuts import get_object_or_404
 
 from blog.models import Blogpost
 from blog.forms import BlogpostForm
@@ -49,6 +50,27 @@ class BlogpostCreateView(TemplateView):
 
     def post(self, request):
         form = BlogpostForm(data=request.POST)
+        if not form.is_valid():
+            return self.render_to_response({'errors': form.errors})
+
+        blogpost = form.save()
+
+        return HttpResponseRedirect(reverse('posts-detail', kwargs={'id': blogpost.id}))
+
+
+class BlogpostEditView(TemplateView):
+    template_name = 'blog/edit.html'
+
+    def get(self, request, id):
+        # Equivalent to executing Blogpost.objects.get(id=id)
+        blogpost = get_object_or_404(Blogpost, id=id)
+        form = BlogpostForm(instance=blogpost)
+
+        return self.render_to_response({'form': form, 'id': id})
+
+    def post(self, request, id):
+        blogpost = get_object_or_404(Blogpost, id=id)
+        form = BlogpostForm(data=request.POST, instance=blogpost)
         if not form.is_valid():
             return self.render_to_response({'errors': form.errors})
 
