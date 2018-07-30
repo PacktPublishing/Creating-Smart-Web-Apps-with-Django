@@ -14,6 +14,7 @@ Vagrant.configure(2) do |config|
     apt-get update -o Acquire::CompressionTypes::Order::=gz
     apt-get upgrade -y
     apt-get update -y
+    apt-get install tree -y
   SHELL
 
 end
