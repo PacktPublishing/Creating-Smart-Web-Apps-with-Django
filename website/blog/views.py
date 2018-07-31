@@ -4,7 +4,7 @@ from django.urls import reverse
 from django.shortcuts import get_object_or_404
 
 from blog.models import Blogpost
-from blog.forms import BlogpostForm
+from blog.forms import BlogpostForm, UserSignupForm
 
 # Create your views here.
 
@@ -77,3 +77,20 @@ class BlogpostEditView(TemplateView):
         blogpost = form.save()
 
         return HttpResponseRedirect(reverse('posts-detail', kwargs={'id': blogpost.id}))
+
+
+class SignupView(TemplateView):
+    template_name = 'blog/signup.html'
+
+    def get(self, request):
+        form = UserSignupForm()
+        return self.render_to_response({'form': form})
+
+    def post(self, request):
+        form = UserSignupForm(data=request.POST)
+        if not form.is_valid():
+            return self.render_to_response({'form': form})
+
+        user = form.save()
+
+        return HttpResponseRedirect(reverse('posts'))
