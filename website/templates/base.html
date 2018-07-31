@@ -16,6 +16,24 @@
     </div>
   </div>
 
+  {% if user.username %}
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li class="menu-text">Welcome {{ user.username }}</li>
+      </ul>
+    </div>
+
+    <div class="top-bar-right">
+      <form action={% url "logout" %} method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"><b>Logout</b></button>
+      </form>
+    </div>
+  </div>
+  {% endif %}
+
   {% block content %}
   {% endblock %}
 
