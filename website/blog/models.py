@@ -7,7 +7,7 @@ from django.conf import settings
 class Blogpost(models.Model):
     title = models.CharField(max_length=240)
 
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, blank=True, null=True, default=None)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     body = models.TextField()
 
     published = models.BooleanField(default=False)
