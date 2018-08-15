@@ -13,7 +13,7 @@ class BlogpostView(TemplateView):
     template_name = 'blog/index.html'
 
     def get(self, request):
-        posts = Blogpost.objects.all()
+        posts = Blogpost.objects.all().order_by('id')
 
         response = [{
             'id': p.id,
