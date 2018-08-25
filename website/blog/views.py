@@ -6,6 +6,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 from blog.models import Blogpost
 from blog.forms import BlogpostForm, UserSignupForm
+from blog.tasks import send_welcome_mail
 
 # Create your views here.
 
@@ -103,5 +104,7 @@ class SignupView(TemplateView):
             return self.render_to_response({'form': form})
 
         user = form.save()
+
+        send_welcome_mail.delay(user.email)
 
         return HttpResponseRedirect(reverse('posts'))
