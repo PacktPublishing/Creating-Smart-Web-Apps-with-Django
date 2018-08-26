@@ -6,7 +6,13 @@ from blog.models import Blogpost
 
 
 class BlogpostAdmin(admin.ModelAdmin):
-    pass
+    actions = ['publish_posts', 'unpublish_posts']
+
+    def publish_posts(self, request, queryset):
+        queryset.update(published=True)
+
+    def unpublish_posts(self, request, queryset):
+        queryset.update(published=False)
 
 
 admin.site.register(Blogpost, BlogpostAdmin)
