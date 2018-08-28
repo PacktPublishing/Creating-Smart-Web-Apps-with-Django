@@ -1,8 +1,9 @@
 # Creating Smart Web Apps with Django [Video]
 This is the code repository for [Creating Smart Web Apps with Django [Video]](https://www.packtpub.com/application-development/creating-smart-web-apps-django-video?utm_source=github&utm_medium=repository&utm_campaign=9781788830157), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the video course from start to finish.
 ## About the Video Course
-	Get under the hood of Django. With this course, you’ll learn to integrate your application with other technologies. You’ll start building practical, advanced web applications that can scale to handle increased workloads. Django brings the power of Python to help you quickly develop web applications. From simple prototypes to large-scale projects, Django encourages a clean and pragmatic design and gives you a comprehensive toolkit to build scalable web apps.
-This course shows you how to take advantage of available modules for common tasks such as user management and authentication. This means you can get started by simply integrating them in your application without having to write a lot of repetitive code yourself. You’ll use Django’s extensive feature set such as the Django ORM and Django Admin to do the heavy lifting for you, while you start building web applications with only about a hundred lines of code in no time.
+
+Get under the hood of Django. With this course, you’ll learn to integrate your application with other technologies. You’ll start building practical, advanced web applications that can scale to handle increased workloads. Django brings the power of Python to help you quickly develop web applications. From simple prototypes to large-scale projects, Django encourages a clean and pragmatic design and gives you a comprehensive toolkit to build scalable web apps. This course shows you how to take advantage of available modules for common tasks such as user management and authentication. This means you can get started by simply integrating them in your application without having to write a lot of repetitive code yourself. You’ll use Django’s extensive feature set such as the Django ORM and Django Admin to do the heavy lifting for you, while you start building web applications with only about a hundred lines of code in no time.
+
 If you want to start building feature-rich, highly scaled applications with the power of Python, then take this course!
 
 <H2>What You Will Learn</H2>
@@ -22,59 +23,14 @@ If you want to start building feature-rich, highly scaled applications with the 
 
 ## Instructions and Navigation
 ### Assumed Knowledge
-To fully benefit from the coverage included in this course, you will need:<br/>
 The course is designed for current or aspiring full-stack engineers or backend engineers who are new to the area of web development and want to use Django to create smart web applications. Basic knowledge of Python, HTML, and JavaScript is recommended.
 ### Technical Requirements
-This course has the following software requirements:<br/>
-Minimum Hardware Requirements
-For successful completion of this course, students will require the computer systems with at least the following:
 
+This course has the following requirements:<br/>
+<b>Minimum Hardware Requirements</b><br>
+For successful completion of this course, students will require the computer systems with at least the following:<ul><li>OS: Linux / OSX</li><li>Processor: i3</li><li>Memory: 512MB</li><li>Storage: 4GB</li></ul><br><b>Recommended Hardware Requirements</b><br>For an optimal experience with hands-on labs and other practical activities, we recommend the following configuration:<ul><li>OS: Linux / OSX</li><li>Processor: i3</li><li>Memory: 1GB</li><li>Storage: 6GB</li></ul><br>
+<b>Software Requirements</b><br><ul><li>Operating system: Linux / OSX </li><li>Browser: Firefox / Chrome / Safari</li><li>Any code editor.</li></ul>
 
-OS: Linux / OSX
-
-
-
-Processor: i3
-
-
-
-Memory: 512MB
-
-
-
-Storage: 4GB
-
-
-Recommended Hardware Requirements
-For an optimal experience with hands-on labs and other practical activities, we recommend the following configuration:
-
-
-OS: Linux / OSX
-
-
-
-Processor: i3
-
-
-
-Memory: 1GB
-
-
-
-Storage: 6GB
-
-
-Software Requirements
-
-Operating system: Linux / OSX
-
-
-
-Browser: Firefox / Chrome / Safari
-
-
-
-Any code editor.
 
 
 ## Related Products
